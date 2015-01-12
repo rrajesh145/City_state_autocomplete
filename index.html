@@ -1,0 +1,37 @@
+<html>
+<head>
+  <script src="address.js" type="text/javascript"></script>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+</head>
+<body onload="listOfCountries('country');">
+  <form action="#" method="get">
+    <div class="contents">
+
+      <p>Country: 
+        <select name="country" id="country" onchange="listOfStatesOrCities(this,'state');">
+          <option value=""></option>            
+        </select>
+      </p>
+
+      <p>State: 
+        <select name="state" id="state" onchange="listOfStatesOrCities(this,'region');">
+          <option value=""></option>
+        </select>
+      </p>
+
+      <p><span id="region">Region:</span> 
+        <select name="region" id="region" onchange="listOfStatesOrCities(this,'city');">
+          <option value=""></option>
+        </select>
+      </p>
+
+      <p>City:
+        <select name="city" id="city">
+          <option value=""></option>
+        </select>
+      </p>
+
+    </div>
+</form>
+</body>
+</html>
